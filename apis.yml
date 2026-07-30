@@ -1,7 +1,27 @@
 aid: landvault
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/landvault.png
 name: Landvault
-description: Landvault is a company surfaced as a portfolio company of speedinvest and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Landvault was surfaced as a portfolio company of Speedinvest and added to the API
+  Evangelist network as a stub awaiting enrichment. Enrichment probing on 2026-07-19
+  found no operating company surface: the landvault.io domain of record resolves to a
+  GoDaddy parking page rather than a website, serving a /lander redirect stub for every
+  path, with no MX records and only a registrar-default DMARC record. The landvault.xyz
+  variant redirects to a GoDaddy for-sale listing. No developer portal, documentation,
+  API reference, OpenAPI definition, SDK, package-registry presence, or GitHub
+  organization could be verified. This profile is retained as a dead lead with recorded
+  probe evidence so the enrichment pipeline does not repeatedly re-attempt it.
 url: https://raw.githubusercontent.com/api-evangelist/landvault/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +29,32 @@ x-backed-by:
 - speedinvest
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: no-surface
+x-status-note: >-
+  Verified 2026-07-19 — landvault.io is a parked GoDaddy domain with no company
+  website and no API surface. See security/landvault-domain-security.yml for probe
+  evidence. Re-check before investing further enrichment effort.
+x-status-verified: '2026-07-19'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Portfolio Lead
+- Speedinvest
+- No API Surface
+- Parked Domain
 apis: []
+common:
+- type: DomainSecurity
+  url: security/landvault-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
