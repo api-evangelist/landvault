@@ -35,7 +35,7 @@ x-status-note: >-
   website and no API surface. See security/landvault-domain-security.yml for probe
   evidence. Re-check before investing further enrichment effort.
 x-status-verified: '2026-07-19'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
 tags:
